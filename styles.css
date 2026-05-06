@@ -1,0 +1,190 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif;
+  /* Mr. Krabs counting money background */
+  background-image: url('https://media.tenor.com/lLHd3lOObuUAAAAe/mr-krabs-rich.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Dark overlay so text pops */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Main container */
+.page-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.289);
+  padding: 30px 40px;
+  border-radius: 20px;
+  border: 3px solid #333;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+}
+
+/* Title - underlined like the wireframe */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #222;
+  /*text-decoration: underline;
+  text-decoration-thickness: 3px;*/
+  margin-bottom: 35px; 
+}
+
+/* Top row layout */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.field-box {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-box label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.field-box input {
+  padding: 10px;
+  border: 2px solid #555;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background: #fff;
+}
+
+/* Center box - rounded rectangle with border */
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 3px solid #333;
+  border-radius: 16px;
+  padding: 15px 25px;
+  background: #fff;
+}
+
+.center-money-pic {
+  width: 130px;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #d21723f9;
+  color: white;
+  border: 2px solid #333;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s;
+  font-family: inherit;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #00cc63db;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Dollars section */
+.dollars-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dollars-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Rounded rectangle output box like the wireframe */
+.dollar-output-box {
+  display: inline-block;
+  border: 3px solid #333;
+  border-radius: 12px;
+  padding: 10px 40px;
+  background: #fff;
+  min-width: 100px;
+}
+
+#dollars-output {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Coins row */
+.coins-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.coin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.coin-card h3 {
+  font-size: 1.2rem;
+  color: #222;
+}
+
+/* Coin picture replaces the circle */
+.coin-pic {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* Count number replaces the line */
+.coin-card p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+  border-bottom: 3px solid #333;
+  padding-bottom: 2px;
+  min-width: 40px;
+  text-align: center;
+}
